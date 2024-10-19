@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background color */
+  color: #333; /* Dark text color */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white; /* White background for the container */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-name {
+  text-align: center;
+  color: #007bff; /* Company name color */
+  font-size: 2.5em; /* Font size for company name */
+}
+
+.clock {
+  text-align: center;
+  font-size: 1.5em; /* Font size for the clock */
+  margin: 10px 0; /* Margin around the clock */
+}
+
+h2 {
+  color: #007bff; /* Section title color */
+}
+
+.form {
+  margin-bottom: 20px; /* Spacing between forms */
+}
+
+label {
+  display: block; /* Labels on their own line */
+  margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"] {
+  width: 100%; /* Full width input */
+  padding: 10px;
+  margin-bottom: 10px; /* Space below inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.records-table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Merge borders */
+}
+
+.records-table th,
+.records-table td {
+  border: 1px solid #ccc; /* Light gray border */
+  padding: 10px; /* Padding in cells */
+  text-align: left; /* Left-align text */
+}
+
+.records-table th {
+  background-color: #f0f0f0; /* Light gray background for headers */
+}

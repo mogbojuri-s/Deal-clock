@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Login/Logout</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <!-- Link to the CSS file -->
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="company-name">BRAIN BOX</h1>
+      <div id="clock" class="clock"></div>
+      <!-- Container for the clock -->
+
+      <h2>Employee Login/Logout</h2>
+
+      <form action="/login" method="POST" class="form">
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id" required />
+        <button type="submit">Log In</button>
+      </form>
+
+      <form action="/logout" method="POST" class="form">
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id" required />
+        <button type="submit">Log Out</button>
+      </form>
+
+      <h2>Attendance Records:</h2>
+      <table border="1" class="records-table">
+        <tr>
+          <th>Employee ID</th>
+          <th>Login Time</th>
+          <th>Logout Time</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+          <td>{{ record['employee_id'] }}</td>
+          <td>{{ record['login_time'] }}</td>
+          <td>{{ record['logout_time'] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <script>
+      // Clock script
+      function updateClock() {
+        const now = new Date();
+        const options = {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        };
+        document.getElementById("clock").innerText = now.toLocaleTimeString(
+          [],
+          options
+        );
+      }
+      setInterval(updateClock, 1000);
+      updateClock(); // Initial call to display the clock immediately
+    </script>
+  </body>
+</html>
